@@ -38,15 +38,15 @@
 - N 이하 자연수 중 i을 약수로 갖는 수의 개수는 **floor(N/i)개**
 
 ### 예제문제
-- [백준](https://www.acmicpc.net/problem/1037) [4375번](./1037.cpp)
+- [백준](https://www.acmicpc.net/problem/1037) [1037번](./1037.cpp)
 
     : 약수가 sqrt(N)을 기준으로 대칭이라는 사실을 알면 간단히 풀리는 문제
 
-- [백준](https://www.acmicpc.net/problem/17427) [4375번](./17427.cpp)
+- [백준](https://www.acmicpc.net/problem/17427) [17427번](./17427.cpp)
 
     : [약수를 구하는 방법](./17427_fail.cpp) vs. 약수의 개수를 구하는 방법 -> 전자는 타임아웃, 후자 이용
 
-- [백준](https://www.acmicpc.net/problem/17425) [4375번](./17425.cpp)
+- [백준](https://www.acmicpc.net/problem/17425) [17425번](./17425.cpp)
 
     : 배수를 이용하는 방법
 
@@ -92,3 +92,11 @@
         > 3. 그 수는 소수로 표시하고, 그 배수들을 모두 지우기 (소수 X)
             - 배수를 지울 때 수의 범위를 보고 i * i or 2 * i 중 선택
 
+### 예제문제
+- [백준](https://www.acmicpc.net/problem/1929) [1929번](./1929.cpp)
+
+    : 에라토스테네스의 체 이용
+
+- [백준](https://www.acmicpc.net/problem/6588) [6588번](./6588.cpp)
+
+    : 에라토스테네스의 체  + 짝수는 소수가 아님을 이용
