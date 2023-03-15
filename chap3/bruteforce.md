@@ -96,3 +96,5 @@
 - [백준](https://www.acmicpc.net/problem/1759) [1759번](./1759.cpp)
 
     : 순서대로 알파벳을 더한다는 패턴
+
+- [백준](https://www.acmicpc.net/problem/14501) [14501번](./14501.cpp)
