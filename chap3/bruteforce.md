@@ -116,3 +116,39 @@
 - [백준](https://www.acmicpc.net/problem/1248) [1248번](./1248.cpp)
 
     : 종료 조건, 호출 조건 정의 + 제외 상황 구현
+
+## 순열
+
+### 필요할 때
+: 순서가 중요한 브루트 포스 문제의 경우 활용 가능
+
+### 관련 알고리즘
+: 순열 구하는 알고리즘
+1. 첫 순열 구하기 : 전체에 대해 비내림차순
+2. 다음 순열 구하기
+    - c++ : ```<algorithm>```의 ```next_permutation(start, end)``` 함수
+    - 로직
+        - A[i-1] < A[i]를 만족하는 가장 큰 i 찾기
+        - j >= i 면서 A[j] > A[i-1]를 만족하는 가장 큰 j 찾기
+        - A[i-1]과 A[j] swap
+        - A[i]부터 순열 뒤집기
+3. 마지막 순열 구하면 종료 : 전체에 대해 비오름차순
+
+### 예제문제
+- [백준](https://www.acmicpc.net/problem/10972) [10972번](./10972.cpp)
+
+- [백준](https://www.acmicpc.net/problem/10973) [10973번](./10973.cpp)
+
+- [백준](https://www.acmicpc.net/problem/10974) [10974번](./10974.cpp)
+
+- [백준](https://www.acmicpc.net/problem/10819) [10819번](./10819.cpp)
+ 
+    : 전부 ```next_permutation``` / ```prev_permutation``` 함수 이용하면 금방 풀리는 문제
+
+- [백준](https://www.acmicpc.net/problem/10971) [10971번](./10971.cpp)
+
+    : N개의 중복 제거를 위해서는 첫 번째 자리 고정 => ```next_permutation(arr.begin()+1, arr.end())```
+
+- [백준](https://www.acmicpc.net/problem/6603) [6603번](./6603.cpp)
+
+    : 선택의 문제를 0과 1의 순열로 표현할 수 있음 => M개의 1과 N-M개의 0의 순열
