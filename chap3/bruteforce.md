@@ -98,3 +98,21 @@
     : 순서대로 알파벳을 더한다는 패턴
 
 - [백준](https://www.acmicpc.net/problem/14501) [14501번](./14501.cpp)
+
+## 백트래킹
+
+### 필요할 때
+: 브루트 포스에서 더이상 **함수 호출이 의미가 없는 경우를 제외**하고 진행
+
+### 예제문제
+- [백준](https://www.acmicpc.net/problem/14889) [14889번](./14889.cpp)
+
+    : 서로 크기가 달라지는 상황을 제외시킴
+
+- [백준](https://www.acmicpc.net/problem/15661) [15661번](./15661.cpp)
+
+- [백준](https://www.acmicpc.net/problem/2529) [2529번](./2529.cpp)
+
+- [백준](https://www.acmicpc.net/problem/1248) [1248번](./1248.cpp)
+
+    : 종료 조건, 호출 조건 정의 + 제외 상황 구현
