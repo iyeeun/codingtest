@@ -26,4 +26,6 @@
         : 코드로 표현
 
 ### 예제문제
-- [백준](https://www.acmicpc.net/problem/1463) [1463번](./.cpp)
+- [백준](https://www.acmicpc.net/problem/1463) [1463번](./1463.cpp)
+
+    : '작은 문제'의 정의와 '가장 작은 문제'에 대해 잘 고민할 것 !!
