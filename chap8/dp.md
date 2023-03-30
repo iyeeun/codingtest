@@ -29,3 +29,21 @@
 - [백준](https://www.acmicpc.net/problem/1463) [1463번](./1463.cpp)
 
     : '작은 문제'의 정의와 '가장 작은 문제'에 대해 잘 고민할 것 !!
+
+- [백준](https://www.acmicpc.net/problem/11726) [11726번](./11726.cpp)
+
+- [백준](https://www.acmicpc.net/problem/11727) [11727번](./11727.cpp)
+
+    : 작은 문제로 나눌 때 가장 마지막 단계에 무엇이 올 수 있는지 생각해봐야 함
+
+- [백준](https://www.acmicpc.net/problem/9095) [9095번](./9095.cpp)
+
+- [백준](https://www.acmicpc.net/problem/11052) [11052번](./11052.cpp)
+
+    : 방법의 수가 정해져있지 않은 경우에는 변수로 일반화하여 전부 확인
+
+- [백준](https://www.acmicpc.net/problem/16194) [16194번](./16194.cpp)
+
+- [백준](https://www.acmicpc.net/problem/) [번](./.cpp)
+
+
