@@ -44,6 +44,17 @@
 
 - [백준](https://www.acmicpc.net/problem/16194) [16194번](./16194.cpp)
 
+#### 연속에 대한 처리 예제
+    : 연속에 대한 조건 -> 마지막으로 온 것을 따로 저장하여 처리
+
+- [백준](https://www.acmicpc.net/problem/15990) [15990번](./15990.cpp)
+
+    : 자료형 주의..
+
+- [백준](https://www.acmicpc.net/problem/10844) [10844번](./10844.cpp)
+
+- [백준](https://www.acmicpc.net/problem/2193) [2193번](./2193.cpp)
+
 - [백준](https://www.acmicpc.net/problem/) [번](./.cpp)
 
 
