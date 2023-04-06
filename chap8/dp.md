@@ -84,6 +84,40 @@
 
     : 재귀 + 메모이제이션도 가능! 풀지는 않았고 코드만 첨부함.
 
-- [백준](https://www.acmicpc.net/problem/) [번](./.cpp)
+- [백준](https://www.acmicpc.net/problem/15988) [15988번](./15988.cpp)
+
+    : 먼저 구해놓고 출력해주기
+
+- [백준](https://www.acmicpc.net/problem/1149) [1149번](./1149.cpp)
+
+    : 그 전까지의 비용이 최소면 나도 최소 + 조건을 만족시키기 위한 종류 나누기 + 조건도 그 전과 나만 맞으면 전체가 조건 만족함 (연속)
+
+- [백준](https://www.acmicpc.net/problem/1309) [1309번](./1309.cpp)
+
+    : 연속 + 조건이 붙으면 그 조건을 세부적으로 나눠보고 해당 경우를 나눠서 저장 (2차원 배열 이용), 마지막 단계를 확인할 때 조건에 맞게 배치 가능한 수 확인
+
+- [백준](https://www.acmicpc.net/problem/11057) [11057번](./11057.cpp)
+
+    : 얘도 연속 + 조건. 경우로 나누고 subproblem 확인하기, 추가 변수 쓸 때는 다 나열해보고 규칙 & 범위 찾기
+
+- [백준](https://www.acmicpc.net/problem/2156) [2156번](./2156.cpp)
+
+    : 연속에 대한 조건이 i-1보다 더 넓은 범위일 경우, **연속의 횟수 자체를 변수로 이용함**
+
+- [백준](https://www.acmicpc.net/problem/1932) [1932번](./1932.cpp)
+
+    : index를 변수로 이용
+
+- [백준](https://www.acmicpc.net/problem/11055) [11055번](./11055.cpp)
+
+- [백준](https://www.acmicpc.net/problem/11722) [11722번](./11722.cpp)
+
+    : 뒤에서부터 구하는 것도 가능함 (N->1)
+
+- [백준](https://www.acmicpc.net/problem/11054) [11054번](./11054.cpp)
+
+    : 앞 + 뒤에서 채우기
+
+- [백준](https://www.acmicpc.net/problem/13398) [13398번](./13398.cpp)
 
 
