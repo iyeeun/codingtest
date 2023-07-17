@@ -92,6 +92,25 @@
         }
     }
     ```
+- 선택 방법이 4가지일 때 : 4진법
+    - k를 4진법으로 만들고 방법의 수를 담은 벡터를 반환하는 함수
+        ```:cpp
+        vector<int> gen(int k) {
+            vector<int> a(LIMIT);
+            for (int i=0; i<LIMIT; i++) {
+                a[i] = (k&3);
+                k >>= 2;
+            }
+            return a;
+        }
+        ```
+    - main
+        ```:cpp
+        for(int i = 0; i < (1 << LIMIT*2); i ++) {
+            vector<int> dirs = gen(i);
+            // solve(arr, dirs); ...
+        }
+        ```
 
 ### 예제문제
 - [14225번 부분수열의 합](https://www.acmicpc.net/problem/14225) ([8분](./14225_2.cpp))
@@ -103,7 +122,58 @@
         - \- mask : not 연산을 수행. mask를 토글 시킴
         - word & : 해당 단어에 마스크에 not 연산을 시킨 것에 & 연산을 수행 -> 배우지 않은 글자가 단어에 들어있으면 해당 자리가 1이 됨
 
-- [13460번 구슬 탈출 2](https://www.acmicpc.net/problem/13460) (재귀 : [48분](./13460.cpp))
+- [13460번 구슬 탈출 2](https://www.acmicpc.net/problem/13460) (재귀 : [48분](./13460.cpp), 비트마스크 : [12분](./13460_2.cpp))
     1. 횟수의 제한이 있음 -> 정해진 동작 k개 중 하나를 n번 고르는 것
     2. 불필요한 호출 제거 : 이전에 움직인 방향으로 또 움직이는 것, 반대 방향으로 움직이는 것 
     3. 2^n개 중 하나를 고르는 경우는 해당 비트마스크를 n자리 수 만큼 읽어 2^n진법으로 표현 가능
+        - main : 모든 경우의 수 만들어서 돌리기
+            ```:cpp
+            for(int i = 0; i < (1 << 10*2); i ++) {
+                vector<int> dir = gen(i);
+                if (!valid(dir)) continue;
+                solve(arr, 0, dir, red, blue);
+            }
+            ```
+        - gen 함수 : 10진수 k를 4진법으로 변환 but 뒤집지는 않음
+            ```:cpp
+            vector<int> gen(int k) {
+                vector<int> a(10);
+                for (int i=0; i<10; i++) {
+                    a[i] = (k&3);
+                    k >>= 2;
+                }
+                return a;
+            }
+            ```
+
+- [12100번 2048 (Easy)](https://www.acmicpc.net/problem/12100) (재귀 : [191분](./12100.cpp), 비트마스크 : [51분](./12100_2.cpp))
+    1. 구슬 탈출 2 문제와 유사함 -> 횟수가 정해져 있음 -> 모든 경우의 수 해보기
+    2. '이미 합쳐진 블록은 또 다른 블록과 다시 합쳐질 수 없다' : 해당 조건을 구현하는 가장 쉬운 방법은 합쳐진 적이 있는지를 따로 배열로 관리하는 것
+
+## 투 포인터
+
+### 예제문제
+- [2003번 수들의 합 2](https://www.acmicpc.net/problem/2003) ([25분](./2003.cpp))
+    1. 각 원소들이 자연수 -> 합을 구할 때 투 포인터 이용 가능
+    2. 값이 찾는 수보다 클 때 / 작을 때 / 같을 때 구분
+        <details><summary>소스코드</summary><div markdown="1">
+            <pre><code>
+            while (left <= right && right < n) {
+                if (sum < s) {
+                    right += 1;
+                    sum += a[right];
+                } else if (sum == s) {
+                    ans += 1;
+                    right += 1;
+                    sum += a[right];
+                } else if (sum > s) {
+                    sum -= a[left];
+                    left++;
+                    if (left > right && left < n) {
+                        right = left;
+                        sum = a[left];
+                    }
+                }
+            }
+            </code></pre>
+            </div></details>
