@@ -14,8 +14,6 @@ vector<int> gen(int k) {
 }
 
 int move(vector<vector<int> > arr, vector<int> &dirs, int n) {
-
-    if(dirs.size() > 5) cout << "size\n";
     
     for(int dir : dirs) {
         vector<vector<bool> > com(n, vector<bool>(n, false));
